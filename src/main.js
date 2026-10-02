@@ -3,7 +3,6 @@ import { orulaPreset } from "./presets/orula.js";
 import { POINTS } from "./presets/points.js";
 import { Simulation } from "./simulation.js";
 import { AudioAnalyzer } from "./audio/audioAnalyzer.js";
-import orulaAudioUrl from "./audio/orula.mp4";
 
 async function loadShaderSource(url) {
     const res = await fetch(url);
@@ -107,7 +106,7 @@ async function init() {
     });
 
     const audioElement = document.getElementById("audioTrack");
-    audioElement.src = orulaAudioUrl;
+    audioElement.src = "./src/audio/orula.mp4";
 
     const playBtn = document.getElementById("playBtn");
     const hudOverlay = document.getElementById("hud-overlay");
